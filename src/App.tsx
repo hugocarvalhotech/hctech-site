@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 import ServicosPage from './pages/ServicosPage';
@@ -8,7 +8,6 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -17,7 +16,6 @@ function App() {
           <Route path="contato" element={<ContatoPage />} />
         </Route>
       </Routes>
-    </Router>
   );
 }
 
