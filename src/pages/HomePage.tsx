@@ -128,7 +128,7 @@ const HomePage = () => {
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Contato</h3>
                 <p className="text-gray-600 mb-2">
-                  <span className="font-semibold">Telefone:</span> +55 81 9.8126-5903
+                  <span className="font-semibold">Telefone:</span> +55 81 9.9575-7805
                 </p>
                 <p className="text-gray-600 mb-4">
                   <span className="font-semibold">Email:</span> comercial@hugocarvalhotech.com.br
