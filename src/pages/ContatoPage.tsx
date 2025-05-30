@@ -92,7 +92,7 @@ const ContatoPage = () => {
               </p>
               <div className="flex items-center">
                 <div className="text-blue-600 text-xl mr-2">🔔</div>
-                <p className="font-medium">Suporte 24/7: +55 81 9.8126-5903</p>
+                <p className="font-medium">Suporte 24/7: +55 81 9.9575-7805</p>
               </div>
             </div>
           </FadeInSection>
