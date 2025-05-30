@@ -64,7 +64,7 @@ const ContatoPage = () => {
                 <div className="text-blue-600 text-xl mr-4">📱</div>
                 <div>
                   <p className="font-medium">Telefone</p>
-                  <p className="text-gray-600">+55 81 9.8126-5903</p>
+                  <p className="text-gray-600">+55 81 9.9575-7805</p>
                 </div>
               </div>
               
