@@ -7,7 +7,7 @@ import codeBlueBg from '../assets/images/modernization/code_blue.jpeg';
 import businessMeetingImg from '../assets/images/modernization/business_meeting.jpeg';
 import datacenterRackImg from '../assets/images/modernization/datacenter_rack.jpeg';
 import networkInfrastructureImg from '../assets/images/modernization/network_infrastructure.jpeg';
-import VeeamLogoImg from '../assets/images/modernization/veeam_logo.jpeg';
+import VeeamLogoImg from '../assets/images/modernization/Veeam_logo.jpeg';
 
 const HomePage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
