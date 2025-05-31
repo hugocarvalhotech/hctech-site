@@ -63,12 +63,10 @@ const HomePage = () => {
     }
   ];
 
-  // Novos: Parceiros/Clientes
   const partners = [
-    VeeamLogoImg,
-    GrafanaImg,
-    ZabbixImg,
-    // Adicione mais logos se quiser
+    { img: VeeamLogoImg, name: "Veeam" },
+    { img: GrafanaImg, name: "Grafana" },
+    { img: ZabbixImg, name: "Zabbix" }
   ];
 
   return (
@@ -81,7 +79,7 @@ const HomePage = () => {
         ctaLink="/servicos"
       />
 
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto max-w-7xl px-4 py-16">
         <FadeInSection delay={300}>
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Serviços</h2>
@@ -104,18 +102,17 @@ const HomePage = () => {
           ))}
         </div>
 
-        {/* Seção de Parceiros e Clientes */}
         <FadeInSection delay={800} direction="up" className="mt-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Parceiros e Clientes</h2>
             <p className="text-lg text-gray-600">Trabalhamos com empresas e soluções reconhecidas mundialmente.</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center">
-            {partners.map((logo, index) => (
+            {partners.map((partner, index) => (
               <div key={index} className="flex justify-center">
                 <img
-                  src={logo}
-                  alt={`Parceiro ${index + 1}`}
+                  src={partner.img}
+                  alt={`Logo do parceiro ${partner.name}`}
                   className="h-20 object-contain grayscale hover:grayscale-0 transition duration-300"
                 />
               </div>
@@ -131,7 +128,7 @@ const HomePage = () => {
                 <p className="text-gray-700">
                   Nossa oferta de Service Desk é um serviço abrangente que fornece suporte técnico especializado e atendimento ao cliente para resolver de forma eficiente e rápida os problemas, remotamente ou presencial.
                 </p>
-                <a href="/contato" className="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105">
+                <a href="/contato" className="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-transform duration-300 transform hover:scale-105">
                   Entre em contato
                 </a>
               </div>
@@ -146,7 +143,7 @@ const HomePage = () => {
       </div>
 
       <FadeInSection delay={1200} className="bg-gray-900 text-white py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto max-w-7xl px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h2 className="text-3xl font-bold mb-4">Pronto para transformar sua infraestrutura de TI?</h2>
@@ -163,7 +160,7 @@ const HomePage = () => {
                 <p className="text-gray-600 mb-4">
                   <span className="font-semibold">Email:</span> comercial@hugocarvalhotech.com.br
                 </p>
-                <a href="/contato" className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center font-medium py-2 px-4 rounded-md transition-all duration-300">
+                <a href="/contato" className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center font-medium py-2 px-4 rounded-md transition-colors duration-300">
                   Enviar mensagem
                 </a>
               </div>
