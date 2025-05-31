@@ -8,7 +8,7 @@ import businessMeetingImg from '../assets/images/modernization/business_meeting.
 import datacenterRackImg from '../assets/images/modernization/datacenter_rack.jpeg';
 import networkInfrastructureImg from '../assets/images/modernization/network_infrastructure.jpeg';
 import VeeamLogoImg from '../assets/images/modernization/veeam_logo.jpg';
-
+import GrafanaImg from '../assets/images/modernization/grafana.jpeg';
 
 const HomePage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -51,7 +51,7 @@ const HomePage = () => {
     {
       title: "Grafana",
       description: "Visualização de dados e métricas através de dashboards interativos e personalizados, permitindo análises detalhadas e tomadas de decisão baseadas em dados.",
-      image: matrixCodeImage,
+      image: GrafanaImg,
       icon: "📈"
     },
     {
