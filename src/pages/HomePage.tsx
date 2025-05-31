@@ -63,6 +63,14 @@ const HomePage = () => {
     }
   ];
 
+  // Novos: Parceiros/Clientes
+  const partners = [
+    VeeamLogoImg,
+    GrafanaImg,
+    ZabbixImg,
+    // Adicione mais logos se quiser
+  ];
+
   return (
     <div className={`transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <HeroSection
@@ -95,6 +103,25 @@ const HomePage = () => {
             />
           ))}
         </div>
+
+        {/* Seção de Parceiros e Clientes */}
+        <FadeInSection delay={800} direction="up" className="mt-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Parceiros e Clientes</h2>
+            <p className="text-lg text-gray-600">Trabalhamos com empresas e soluções reconhecidas mundialmente.</p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center">
+            {partners.map((logo, index) => (
+              <div key={index} className="flex justify-center">
+                <img
+                  src={logo}
+                  alt={`Parceiro ${index + 1}`}
+                  className="h-20 object-contain grayscale hover:grayscale-0 transition duration-300"
+                />
+              </div>
+            ))}
+          </div>
+        </FadeInSection>
 
         <FadeInSection delay={900} direction="up" className="mt-20">
           <div className="bg-blue-50 rounded-lg p-8 border border-blue-100">
