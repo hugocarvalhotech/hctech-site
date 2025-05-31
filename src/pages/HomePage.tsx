@@ -10,7 +10,7 @@ import networkInfrastructureImg from '../assets/images/modernization/network_inf
 import VeeamLogoImg from '../assets/images/modernization/veeam_logo.jpg';
 import GrafanaImg from '../assets/images/modernization/grafana.jpeg';
 import ZabbixImg from '../assets/images/modernization/zabbix.jpeg';
-import PartnerCarousel from '../components/ui/PartnerCarousel';
+import PartnerCarousel from '../components/PartnerCarousel';
 
 const HomePage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
