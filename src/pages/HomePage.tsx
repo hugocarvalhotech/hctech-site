@@ -7,6 +7,7 @@ import codeBlueBg from '../assets/images/modernization/code_blue.jpeg';
 import businessMeetingImg from '../assets/images/modernization/business_meeting.jpeg';
 import datacenterRackImg from '../assets/images/modernization/datacenter_rack.jpeg';
 import networkInfrastructureImg from '../assets/images/modernization/network_infrastructure.jpeg';
+import VeeamLogoImg from '../assets/images/modernization/veeam_logo.jpeg';
 
 const HomePage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -55,7 +56,7 @@ const HomePage = () => {
     {
       title: "Veeam Backup",
       description: "Soluções completas de backup e recuperação de desastres com Veeam, garantindo a segurança dos seus dados e rápida recuperação em caso de incidentes.",
-      image: businessMeetingImg,
+      image: VeeamLogoImg,
       icon: "🔄"
     }
   ];
