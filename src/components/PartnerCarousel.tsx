@@ -1,12 +1,11 @@
-// components/ui/Carousel.tsx
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
 interface CarouselProps {
-  images: string[];
+  images?: string[];
 }
 
-const Carousel = ({ images }: CarouselProps) => {
+const Carousel = ({ images = [] }: CarouselProps) => {
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     slides: { perView: 3, spacing: 15 },
