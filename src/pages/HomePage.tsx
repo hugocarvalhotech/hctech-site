@@ -9,6 +9,7 @@ import datacenterRackImg from '../assets/images/modernization/datacenter_rack.jp
 import networkInfrastructureImg from '../assets/images/modernization/network_infrastructure.jpeg';
 import VeeamLogoImg from '../assets/images/modernization/veeam_logo.jpg';
 import GrafanaImg from '../assets/images/modernization/grafana.jpeg';
+import ZabbixImg from '../assets/images/modernization/zabbix.jpeg';
 
 const HomePage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -45,7 +46,7 @@ const HomePage = () => {
     {
       title: "Zabbix",
       description: "Implementação e gerenciamento de soluções de monitoramento Zabbix para acompanhamento em tempo real da sua infraestrutura, com alertas personalizados e dashboards informativos.",
-      image: codeBlueBg,
+      image: ZabbixImg,
       icon: "📊"
     },
     {
