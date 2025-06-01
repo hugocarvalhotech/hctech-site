@@ -70,7 +70,7 @@ const HomePage = () => {
     GrafanaImg,
     ZabbixImg,
     DellImg,
-    businessMeetingImg
+  
     // Adicione mais logos se quiser
   ];
 
@@ -80,7 +80,7 @@ const HomePage = () => {
     GrafanaImg,
     ZabbixImg,
     DellImg,
-    businessMeetingImg
+ 
     // Adicione mais logos se quiser
   ];
 
