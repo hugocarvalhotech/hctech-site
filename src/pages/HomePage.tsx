@@ -72,6 +72,16 @@ const HomePage = () => {
     }
   ];
 
+  // Clientes - será carrossel (passa a vir antes dos parceiros)
+  const clients = [
+    envasesImg,
+    mekatronikImg,
+    White_MartinsImg,
+    ChlorumImg,
+    DellImg,
+    mekatronikImg,
+  ];
+
   // Parceiros (grid normal)
   const partners = [
     VeeamLogoImg,
@@ -82,42 +92,32 @@ const HomePage = () => {
     ChlorumImg
   ];
 
-  // Clientes - será carrossel
-  const Client = [
-    envasesImg,
-    mekatronikImg,
-    White_MartinsImg,
-    ChlorumImg,
-    DellImg,
-    mekatronikImg,
-  ];
-
-  // Configuração do react-slick para o carrossel dos Clientes
- const sliderSettings = {
-  dots: false,
-  infinite: true,
-  speed: 4000,                // tempo de scroll mais longo para suavizar
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 0,           // zero para ignorar tempo parado
-  cssEase: "linear",         // garante movimento contínuo
-  arrows: false,              // opcional, mais limpo
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: { slidesToShow: 3 },
-    },
-    {
-      breakpoint: 640,
-      settings: { slidesToShow: 2 },
-    },
-    {
-      breakpoint: 400,
-      settings: { slidesToShow: 1 },
-    },
-  ],
-};
+  // Configuração do react-slick para o carrossel dos Clientes e Parceiros
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 4000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 3 },
+      },
+      {
+        breakpoint: 640,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 400,
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  };
 
   return (
     <div className={`transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
@@ -152,34 +152,14 @@ const HomePage = () => {
           ))}
         </div>
 
-{/* Seção de Parceiros (carrossel) */}
-<FadeInSection delay={800} direction="up" className="mt-20">
-  <div className="text-center mb-12">
-    <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Parceiros</h2>
-    <p className="text-lg text-gray-600">Trabalhamos com empresas e soluções reconhecidas mundialmente.</p>
-  </div>
-  <Slider {...sliderSettings} className="px-4">
-    {partners.map((logo, index) => (
-      <div key={index} className="flex justify-center px-4">
-        <img
-          src={logo}
-          alt={`Parceiro ${index + 1}`}
-          className="h-20 object-contain transition duration-300"
-        />
-      </div>
-    ))}
-  </Slider>
-</FadeInSection>
-
-
-         {/* Clientes com carrossel */}
+        {/* Clientes com carrossel - mostrando primeiro */}
         <FadeInSection delay={800} direction="up" className="mt-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Clientes</h2>
             <p className="text-lg text-gray-600">Trabalhamos com empresas e soluções reconhecidas mundialmente.</p>
           </div>
           <Slider {...sliderSettings} className="px-4">
-            {Client.map((logo, index) => (
+            {clients.map((logo, index) => (
               <div key={index} className="flex justify-center px-4">
                 <img
                   src={logo}
@@ -191,7 +171,26 @@ const HomePage = () => {
           </Slider>
         </FadeInSection>
 
+        {/* Seção de Parceiros (carrossel) - depois dos clientes */}
         <FadeInSection delay={900} direction="up" className="mt-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Parceiros</h2>
+            <p className="text-lg text-gray-600">Trabalhamos com empresas e soluções reconhecidas mundialmente.</p>
+          </div>
+          <Slider {...sliderSettings} className="px-4">
+            {partners.map((logo, index) => (
+              <div key={index} className="flex justify-center px-4">
+                <img
+                  src={logo}
+                  alt={`Parceiro ${index + 1}`}
+                  className="h-20 object-contain transition duration-300"
+                />
+              </div>
+            ))}
+          </Slider>
+        </FadeInSection>
+
+        <FadeInSection delay={1000} direction="up" className="mt-20">
           <div className="bg-blue-50 rounded-lg p-8 border border-blue-100">
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-2/3 mb-6 md:mb-0 md:pr-8">
