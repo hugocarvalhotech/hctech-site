@@ -60,8 +60,8 @@
     "vaul": "^1.1.2",
     "zod": "^3.24.1",
     "keen-slider": "^6.x.x"
-    "react-slick": "^0.x.x",
-    "slick-carousel": "^1.x.x"
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
     
   },
   "devDependencies": {
