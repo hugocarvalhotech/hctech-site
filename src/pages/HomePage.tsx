@@ -15,6 +15,8 @@ import ChlorumImg from '../assets/images/modernization/Chlorum.jpeg';
 import White_MartinsImg from '../assets/images/modernization/White_Martins.jpeg';
 import mekatronikImg from '../assets/images/modernization/mekatronik.jpeg';
 import envasesImg from '../assets/images/modernization/envases.jpeg';
+import msImg from '../assets/images/modernization/ms.jpeg';
+
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -78,6 +80,7 @@ const HomePage = () => {
     mekatronikImg,
     White_MartinsImg,
     ChlorumImg,
+    msImg
   ];
 
   // Parceiros (grid normal)
