@@ -64,21 +64,23 @@ const HomePage = () => {
     }
   ];
 
-  // Novos: Parceiros/Clientes
+  // Novos: Parceiros
   const partners = [
     VeeamLogoImg,
     GrafanaImg,
     ZabbixImg,
     DellImg,
+    businessMeetingImg
     // Adicione mais logos se quiser
   ];
 
-    // Novos: Parceiros/Clientes
+    // Novos: PClientes
   const Client = [
     VeeamLogoImg,
     GrafanaImg,
     ZabbixImg,
     DellImg,
+    businessMeetingImg
     // Adicione mais logos se quiser
   ];
 
@@ -115,10 +117,10 @@ const HomePage = () => {
           ))}
         </div>
 
-        {/* Seção de Parceiros e Clientes */}
+        {/* Seção de Parceiros */}
         <FadeInSection delay={800} direction="up" className="mt-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Parceiros e Clientes</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Parceiros</h2>
             <p className="text-lg text-gray-600">Trabalhamos com empresas e soluções reconhecidas mundialmente.</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center">
@@ -137,7 +139,7 @@ const HomePage = () => {
          {/*   Clientes */}
         <FadeInSection delay={800} direction="up" className="mt-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Parceiros e Clientes</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Clientes</h2>
             <p className="text-lg text-gray-600">Trabalhamos com empresas e soluções reconhecidas mundialmente.</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center">
