@@ -10,6 +10,7 @@ import networkInfrastructureImg from '../assets/images/modernization/network_inf
 import VeeamLogoImg from '../assets/images/modernization/veeam_logo.jpg';
 import GrafanaImg from '../assets/images/modernization/grafana.jpeg';
 import ZabbixImg from '../assets/images/modernization/zabbix.jpeg';
+import DellImg from '../assets/images/modernization/Dell_Logo.jpeg';
 
 const HomePage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -68,6 +69,7 @@ const HomePage = () => {
     VeeamLogoImg,
     GrafanaImg,
     ZabbixImg,
+    DellImg,
     // Adicione mais logos se quiser
   ];
 
