@@ -79,6 +79,7 @@ const HomePage = () => {
     ZabbixImg,
     DellImg,
     mekatronikImg,
+    ChlorumImg
   ];
 
   // Clientes - será carrossel
