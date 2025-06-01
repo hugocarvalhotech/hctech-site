@@ -16,6 +16,10 @@ import White_MartinsImg from '../assets/images/modernization/White_Martins.jpeg'
 import mekatronikImg from '../assets/images/modernization/mekatronik.jpeg';
 import envasesImg from '../assets/images/modernization/envases.jpeg';
 
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 const HomePage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -68,25 +72,46 @@ const HomePage = () => {
     }
   ];
 
-  // Novos: Parceiros
+  // Parceiros (grid normal)
   const partners = [
     VeeamLogoImg,
     GrafanaImg,
     ZabbixImg,
     DellImg,
-  
-    // Adicione mais logos se quiser
   ];
 
-    // Novos: PClientes
+  // Clientes - será carrossel
   const Client = [
     envasesImg,
     mekatronikImg,
     White_MartinsImg,
     ChlorumImg,
- 
-    // Adicione mais logos se quiser
   ];
+
+  // Configuração do react-slick para o carrossel dos Clientes
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 3 },
+      },
+      {
+        breakpoint: 640,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 400,
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  };
 
   return (
     <div className={`transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
@@ -121,7 +146,7 @@ const HomePage = () => {
           ))}
         </div>
 
-        {/* Seção de Parceiros */}
+        {/* Seção de Parceiros (grid normal) */}
         <FadeInSection delay={800} direction="up" className="mt-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Parceiros</h2>
@@ -140,23 +165,23 @@ const HomePage = () => {
           </div>
         </FadeInSection>
 
-         {/*   Clientes */}
+         {/* Clientes com carrossel */}
         <FadeInSection delay={800} direction="up" className="mt-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Clientes</h2>
             <p className="text-lg text-gray-600">Trabalhamos com empresas e soluções reconhecidas mundialmente.</p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center">
+          <Slider {...sliderSettings} className="px-4">
             {Client.map((logo, index) => (
-              <div key={index} className="flex justify-center">
+              <div key={index} className="flex justify-center px-4">
                 <img
                   src={logo}
-                  alt={`Parceiro ${index + 1}`}
+                  alt={`Cliente ${index + 1}`}
                   className="h-20 object-contain grayscale hover:grayscale-0 transition duration-300"
                 />
               </div>
             ))}
-          </div>
+          </Slider>
         </FadeInSection>
 
         <FadeInSection delay={900} direction="up" className="mt-20">
@@ -180,33 +205,6 @@ const HomePage = () => {
           </div>
         </FadeInSection>
       </div>
-
-      <FadeInSection delay={1200} className="bg-gray-900 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 mb-8 md:mb-0">
-              <h2 className="text-3xl font-bold mb-4">Pronto para transformar sua infraestrutura de TI?</h2>
-              <p className="text-xl text-gray-300">
-                Entre em contato conosco hoje mesmo para uma consultoria personalizada.
-              </p>
-            </div>
-            <div className="md:w-1/3">
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Contato</h3>
-                <p className="text-gray-600 mb-2">
-                  <span className="font-semibold">Telefone:</span> +55 81 9.9575-7805
-                </p>
-                <p className="text-gray-600 mb-4">
-                  <span className="font-semibold">Email:</span> comercial@hugocarvalhotech.com.br
-                </p>
-                <a href="/contato" className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center font-medium py-2 px-4 rounded-md transition-all duration-300">
-                  Enviar mensagem
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </FadeInSection>
     </div>
   );
 };
