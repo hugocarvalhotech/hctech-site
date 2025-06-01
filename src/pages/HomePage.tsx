@@ -122,8 +122,8 @@ const HomePage = () => {
   return (
     <div className={`transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <HeroSection
-        title="Soluções de TI para o seu negócio"
-        subtitle="Infraestrutura, segurança e consultoria especializada para empresas de todos os portes"
+        title="Transformamos tecnologia em resultados para o seu negócio"
+        subtitle="Consultoria, soluções e serviços completos em TI para empresas de todos os portes"
         backgroundImage={codeBlueBg}
         ctaText="Conheça nossos serviços"
         ctaLink="/servicos"
