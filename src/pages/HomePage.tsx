@@ -86,6 +86,7 @@ const HomePage = () => {
     mekatronikImg,
     White_MartinsImg,
     ChlorumImg,
+    DellImg
   ];
 
   // Configuração do react-slick para o carrossel dos Clientes
