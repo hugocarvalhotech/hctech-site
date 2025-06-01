@@ -11,6 +11,10 @@ import VeeamLogoImg from '../assets/images/modernization/veeam_logo.jpg';
 import GrafanaImg from '../assets/images/modernization/grafana.jpeg';
 import ZabbixImg from '../assets/images/modernization/zabbix.jpeg';
 import DellImg from '../assets/images/modernization/Dell_Logo.jpeg';
+import ChlorumImg from '../assets/images/modernization/Chlorum.jpeg';
+import White_MartinsImg from '../assets/images/modernization/White_Martins.jpeg';
+import mekatronikImg from '../assets/images/modernization/mekatronik.jpeg';
+import envasesImg from '../assets/images/modernization/envases.jpeg';
 
 const HomePage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -76,10 +80,10 @@ const HomePage = () => {
 
     // Novos: PClientes
   const Client = [
-    VeeamLogoImg,
-    GrafanaImg,
-    ZabbixImg,
-    DellImg,
+    envasesImg,
+    mekatronikImg,
+    White_MartinsImg,
+    ChlorumImg,
  
     // Adicione mais logos se quiser
   ];
