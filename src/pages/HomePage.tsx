@@ -156,7 +156,7 @@ const HomePage = () => {
         <FadeInSection delay={800} direction="up" className="mt-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Clientes</h2>
-            <p className="text-lg text-gray-600">Trabalhamos com empresas e soluções reconhecidas mundialmente.</p>
+            <p className="text-lg text-gray-600">Empresas de destaque que confiam em nossas soluções tecnológicas para impulsionar seus negócios globalmente.</p>
           </div>
           <Slider {...sliderSettings} className="px-4">
             {clients.map((logo, index) => (
@@ -175,7 +175,7 @@ const HomePage = () => {
         <FadeInSection delay={900} direction="up" className="mt-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Nossos Parceiros</h2>
-            <p className="text-lg text-gray-600">Trabalhamos com empresas e soluções reconhecidas mundialmente.</p>
+            <p className="text-lg text-gray-600">Juntos com empresas renomadas mundialmente, entregamos tecnologia de ponta e resultados reais.</p>
           </div>
           <Slider {...sliderSettings} className="px-4">
             {partners.map((logo, index) => (
