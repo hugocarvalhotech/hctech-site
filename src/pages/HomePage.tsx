@@ -78,6 +78,7 @@ const HomePage = () => {
     GrafanaImg,
     ZabbixImg,
     DellImg,
+    mekatronikImg,
   ];
 
   // Clientes - será carrossel
@@ -86,8 +87,8 @@ const HomePage = () => {
     mekatronikImg,
     White_MartinsImg,
     ChlorumImg,
-    DellImg
-    mekatronikImg
+    DellImg,
+    mekatronikImg,
   ];
 
   // Configuração do react-slick para o carrossel dos Clientes
