@@ -78,8 +78,6 @@ const HomePage = () => {
     mekatronikImg,
     White_MartinsImg,
     ChlorumImg,
-    DellImg,
-    mekatronikImg,
   ];
 
   // Parceiros (grid normal)
@@ -88,7 +86,6 @@ const HomePage = () => {
     GrafanaImg,
     ZabbixImg,
     DellImg,
-    mekatronikImg,
     ChlorumImg
   ];
 
