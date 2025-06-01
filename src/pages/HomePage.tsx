@@ -89,7 +89,7 @@ const HomePage = () => {
     GrafanaImg,
     ZabbixImg,
     DellImg,
-    ChlorumImg
+    mekatronikImg,
   ];
 
   // Configuração do react-slick para o carrossel dos Clientes e Parceiros
